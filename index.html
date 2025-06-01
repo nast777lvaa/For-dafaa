@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+                  <title>kenangan bersamamu dari 2023 sampai sekarang</title>
+  <!-- Google Fonts: Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+   <audio src="Best Of Pamungkas Lagu Pamungkas (Playlist).mp3" controls loop></audio>
+  <style>  .audio-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  audio {
+    width: 320px;
+    outline: none;
+    accent-color: #ff69b4; /* pink controls for supported browsers */
+    border-radius: 12px;
+    box-shadow: 0 0 10px 3px rgba(255, 105, 180, 0.85);
+    padding-left: 72px; /* space for cat */
+    background: #fff0f6;
+  }
+
+  /* Maru-inspired chubby cat container top-left on controls */
+  .cat {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 64px;
+    height: 64px;
+    user-select: none;
+    cursor: default;
+    filter: drop-shadow(1px 2px 3px rgba(209,67,141,0.6));
+  }
+
+  /* Big chubby rounded face */
+  .face {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(145deg, #f9d9d9, #f2b4b4);
+    border-radius: 50% / 60%;
+    border: 3px solid #d1478d;
+    box-shadow:
+      inset 0 8px 10px #f4a3a3,
+      0 5px 10px rgba(209, 67, 141, 0.35);
+  }
+
+  /* Cheeks – circles on either side */
+  .cheek {
+    position: absolute;
+    width: 22px;
+    height: 20px;
+    background: #f49797;
+    border-radius: 50%;
+    top: 35px;
+    box-shadow: inset 0 4px 8px #ec7f7f;
+  }
+  .cheek.left {
+    left: 8px;
+  }
+  .cheek.right {
+    right: 8px;
+  }
+
+  /* Ears */
+  .ear {
+    position: absolute;
+    top: -14px;
+    width: 20px;
+    height: 22px;
+    background: linear-gradient(135deg, #f8c7c7, #f59999);
+    border-radius: 40% 40% 30% 30% / 70% 70% 40% 40%;
+    border: 3px solid #d1478d;
+    box-shadow: inset 0 6px 8px #f18080;
+  }
+  .ear.left {
+    left: 4px;
+    transform: rotate(-18deg);
+  }
+  .ear.right {
+    right: 4px;
+    transform: rotate(18deg);
+  }
+
+  /* Eyes */
+  .eye {
+    position: absolute;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    background: #4b2a65;
+    border-radius: 50%;
+    border: 2.5px solid #d1478d;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px #6a4796;
+  }
+  .eye.left {
+    left: 14px;
+  }
+  .eye.right {
+    right: 14px;
+  }
+
+  /* Pupils */
+  .pupil {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 3px white;
+  }
+
+  /* Eyelids blinking */
+  .eyelid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f9d9d9, #f2b4b4);
+    transform-origin: top center;
+    animation: blink 5s infinite;
+    border-radius: 50% / 60%;
+    box-shadow: inset 0 5px 8px #f4a3a3;
+  }
+  .eye.right .eyelid {
+    animation-delay: 2.7s;
+  }
+
+  /* Nose and mouth shape formed as a small heart */
+  .nose {
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: #d1478d;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    box-shadow: 0 0 3px #a03265;
+  }
+
+  .mouth {
+    position: absolute;
+    width: 18px;
+    height: 12px;
+    top: 46px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .mouth::before,
+  .mouth::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    border: 2.5px solid #d1478d;
+    border-top: none;
+    border-right: none;
+    border-radius: 0 0 14px 14px;
+    top: 0;
+  }
+  .mouth::before {
+    left: 0;
+    transform: rotate(-30deg);
+  }
+  .mouth::after {
+    right: 0;
+    transform: rotate(30deg);
+  }
+
+  /* Blush dots for extra cuteness */
+  .blush {
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    background: #f67d96;
+    border-radius: 50%;
+    top: 44px;
+    box-shadow: inset 0 2px 5px #f47c97;
+  }
+  .blush.left {
+    left: 6px;
+  }
+  .blush.right {
+    right: 6px;
+  }
+
+  /* Whiskers */
+  .whiskers {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 68px;
+    height: 2px;
+    transform: translateX(-50%);
+  }
+  .whiskers::before,
+  .whiskers::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background: #d1478d;
+    top: 0;
+    border-radius: 2px;
+  }
+  .whiskers::before {
+    left: 3px;
+    transform: rotate(18deg);
+  }
+  .whiskers::after {
+    right: 3px;
+    transform: rotate(-18deg);
+  }
+
+  /* Animations */
+  @keyframes blink {
+    0%, 5%, 95%, 100% {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    10%, 90% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+</style>
+  <style>
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Playfair Display', serif; /* Updated font */
+      background-color: #f9f4ec; /* Cream background */
+      color: #4a3a2a; /* Dark text color */
+      height: auto;
+      padding: 20px;
+      background-image: 
+        radial-gradient(circle, rgba(0,0,0,0.02) 1px, transparent 2px),
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 20px 20px, 4px 4px, 4px 4px;
+      background-position: 0 0, 0 0, 2px 2px;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: ;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    h4, h5 {
+      color: pink;
+      margin: 10px 0;
+    }
+    p {
+      margin: 10px 0;
+    }
+    mark {
+      background-color: pink;
+    }
+    small {
+      color: pink;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .heart {
+      position: fixed;
+      color: #ff3366;
+      font-size: 24px;
+      user-select: none;
+      pointer-events: none;
+      animation: floatUp 1s ease forwards;
+      will-change: transform, opacity;
+      filter: drop-shadow(0 0 2px #ff6699);
+      z-index: 9999;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-80px) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1><span style="color:pink">kenangan bersamamu dari 2023 waktu kita smp sampai saat ini</h1></span>
+  <h4><small>&copy; Danastri Aisha Malva, 22 April 2024</small></h4>
+  <h5><small><span style="color: red;">I hope this website reaches Dafa Hafidz Ladzuardi</span></small></h5>
+  <h6><small><span style="color:black;">play musicnya dulu di atas, enjoy!</span></small></h6>
+  <img src="IMG_20250601_000344.jpg" alt="orang ganteng">
+  <small>
+    <p><span style="color:pink;">Bersama mu!? </span></p>
+    <p><span style="color: black">bersamamu semuanya tenang dan tidak ada yang perlu aku khawatirkan, bersamamu membuat ku nyaman selalu, bersamamu aku bahagia, bersamamu aku menjadi diri ku sendiri, bersama mu membuat aku banyak ngomong, bersamamu membuat aku menjadi orang yang khawatir, bersamamu aku menjadi orang yang peduli dengan hal hal apapun itu.</p>
+    <p><span style="color: black">bersamamu di mulai dari 2023, masa masanya kita smp kelas 9 di smpn 1 margahayu, kamu inget spot ngobrol kita pertama kali? kamu inget bagaimana kita bertemu? kamu ingat waktu yang kita sukai?</p>
+    <p><span style="color: black">kalau gak inget parah, wkwkwk bercanda, ayo kita lihat kenangan kita, aku buat website ini aku pingin nyimpan kenangan bersamamu lewat hobi ku <cite>progamer</cite></p>
+    
+    <!-- Description list -->
+    <dl>
+      <dt><h4><span style="color:pink;">&bigstar; Awal pertemuan kita</span></h4></dt>
+      <dd>
+        <p><span style="color: black">inget gak kita ketemu gimana? kita ketemu di neutron yap tempat bimbel smp aku dulu dan kamu juga bimbel di neutron awalnya aku lihat kamu orangnya pendiem alias aku mandang kamu introvert kamu masuk waktu hari ke 2 pertemuan kamu duduk di belakang aku dan aku depan kamu, aku masih inget pelajaran nya kita belajar matematika sama mba saima, aku gak berani ngajak kenalan kamu dan aku juga gak ada niatan buat kenalan sama kamu.</p>
+        <p><span style="color: black">terus waktu kita ketemu di smp pertama kalinya, karena aku belum pernah lihat kamu sama sekali di smp waktu itu karena kelas kita berjauhan, kita ketemu waktu ada event sekolah yaitu lomba 17 agustusan, hahahah kamu ngejek aku karena pake daster karena aku ikutan lomba mindahin gelas plastik pakai balon <q>bu haji</q> kata kamu ngejek ke aku, di situ aku gak peduliin ejekan kamu, karena di situ I don't care If I'm not beautiful, it's because I don't want to look beautiful in your eyes, tapi sekarang aku memperbaiki diri aku pingin kelihatan sempurna dimatamu walaupun ya gak sesuai expectations kamu.</p>
+          <p><span style="color: black">owh iyah kamu percaya tarot gak? kalau aku percaya, soalnya sebelum aku kenal sama kamu seminggu sebelumnya aku baca tarot sama tiktokers wkwwkwk @tarotbyginagita ini akunnya wkwk aku order dia dan aku baca gimana percintaan aku kedepannya karena waktu itu aku udah jomblo lama hahahahah, dia bilang ada problem di akunya jadi gak orang orang takut deketin aku, tapi dia lihat di kartunya pasti ada orang yang bakal deketin kamu dan ciri cirinya persis banget kayak kamu yang dia bilang, mulai dari fisik, hobi, cara ngedeketinnya, bulan lahirnya. dan aku percaya tarot</span></p>
+        </dd>
+      
+      <dt><h4><span style="color:pink;">&bigstar; Awal kita deket</span></h4></dt>
+      <dd>
+        <p><span style="color: black">itu aku deket sama kamu karena aku suka ke ujung bangunan sekolah aku sama diandra, padahal di situ aku gak ada niatan ketemu sama kamu, aku cuman niat nyari angin sama ngerjain temen temen ku yang mau ke kantin, tapi aku ngobrol juga sana temen kelas kamu raisya sama raysa.</p>
+        <p><span style="color: black">terus ada temen mu yang kayak bakso itu wkwkkw yap kenlle dia temen kamu yang kamu juga kalau sama dia sebel wkkwkw, dia nih fitnah bilang ke kamu <q>itu ada danas nyariin pingin ngobrol</q> dia bilang, emang dasar tukang fitnah tiba tiba kamu keluar kelas dan aku cuman lihatin kamu doang terus kamu nanya <q>ada apa</q> aku di situ binggung aku cuman gelengin kepala wkkwkw, terus kamu basa basi <q>tadi pelajaran apa?</q> kamu nanya ke aku, aku lupa aku jawab apa intinya kita ngobrol soal <mark style="color:pink transparant"><span style="color: white;"> pelajaran apa tadi</mark>.</p>
+      </dd>
+      
+      <dt><h4><span style="color:pink;">&bigstar; cerita pdktan kita</span></h4></dt>
+      <dd>
+        <p><span style="color: black">kamu inget gak sih waktu kita pdktan, awalnya aku tuh ngechat kamu kan terus aku minta <mark style="color:pink transparant"><span style="color: white;">foto materi</mark> yang di les terus saling save nomber deh terus aku bikin sw <mark style="color:pink transparant"><span style="color: white;">mobile legend</mark> pas itu terus kamu ngejek aku <abbr title="poin kecil">"poke"</abbr> iya deh kan pas itu aku masih epic abadi wkkwkwk ampun suhuuu, teeus terus kita chatan terus <mark style="color:pink transparant"><span style="color: white;">mabar</mark> deh di situ pertama kali aku main support heheh.</p>
+        <p><span style="color: black">terus aku selalu ajah ada pas kamu lagi <mark style="color:pink transparant"><span style="color: white;">olahraga</mark>, kebetulan aja aku sering jamkos pas pasan sama jam pelajaran olahraga kamu, kebetulan juga spot kelas aku langsung ke lapangan utama, jadi di anggepnya ngelihatin kamu eya wkwkwk, padahal cuman ngadem sambil lihatin pohon iconic samar, btw <mark style="color:pink transparant"><span style="color: white;">samar</mark> sama <mark style="color:pink transparant"><span style="color: white;">neutron</mark> jadi bukti bahwa kita pernah mencintai satu sama lain yah wkwkw.</p>
+        <p><span style="color: black">kamu inget gak minuman favorite aku dulu apa? hayooo hahaha yess <mark style="color:pink transparant"><span style="color: white;">fruite tea!!</mark> fruite tea juga bagian dari pendekatan kita loh, dulu aku gak tau tiba tiba ada niatan beliin kamu fruit tea waktu olahraga, nah awalnya aku yuh mau beliin kamu sama kenlee tapi fruite tea yang 1 nya di minum diandra wkwkwk, jadi aku cuman kasih ke salah satu, dan gak tau kenapa aku bilangnya buat kamu, aku masih inget aku beliin kamu fruit tea pertama kali yang ungu, terus minggu besoknya aku ngasih kamu fruit tea lagih tapi yang ini beda aku ngasih surat juga ke kamu hahahaha, tau gak sih sticky note nya aku minta ke diandra wkwkwkw terus aku bikin suratnya sampai berulang ulang sumpah ada mungkin 8 kali wkwkwk grogi takut salah, gak tau kenapa gak kayak biasanya aku nulis surat biasa ajah, ini aku nervous.</p>
+        <p><span style="color: black">wkwkwk terus selain ituu kamu seringg banget <mark style="color:pink transparant"><span style="color: white;">ngereply sw aku</mark>, aku miror selfie di miniso kamu reply <q>dimana cantik?</q> awlanya sih massagenya gitu terus di apus sama kamu hahahahah, padahal aku pake scrip jadi ketauan kan ganteng ngetik apah, aku jawab ajah ya <q>di hatimu</q> kamu malah baper hahahahha aku bilang bercanda wkwkw.</p>
+        <p><span style="color: black">aku jadinya hampir tiap hari ke <mark style="color:pink transparant"><span style="color: white;">ujungan bangunan kelas aku</mark> buat ngobrol sama kamu, lucu banget wkwkkw ngobrolnya jauhan, terus aku selalu maksa buat anterin ke diandra hahahah jadi nyamuk dia, terus waktu semwster 1 pas ulangan pertengahan semester ada jovaneu mitnah aku hahaha kalau aku pingin <mark style="color:pink transparant"><span style="color: white;"><abbr title="foto bareng">fotbar</abbr></mark> eh tapi di iyain dan di ayoin sama kamu, sumpah aku malu bangett huhuw mana fotonya itu mah di lihatin 2 kelas, kelas aku sama kelas kamu terus mereka bahagia banget lihta kita foto bareng huhuww, terus aku canggung banget dan shock pas kamu rangkul aku huhuww padahal aku takut di gigitt hahahahah, potbar pertama kita dehh.</p>
+      </dd>
+      
+      <dt><h4><span style="color:pink;">&bigstar; waktu kita jadian</span></h4></dt>
+      <dd>
+        <p><span style="color: black">kamu inget gak tanggal kita jadian? yapp tanggal <mark style="color:pink transparant"><span style="color: white;">20 oktober 2023</mark>, awalnya aku udah dapet banyak spoiler kalau kamu bakal nembak aku di jogaja wkwkwkkw bocorr sayangg hahahha, eh tapi ternyata oktober udah jadian ajah nih, ini tuh sehari setelah kita fotbar pertama kita jiyahahahha, lucu bangett yahhh, kamu nembak aku di whatsaap jadinya malem malem tanggal 20 oktober dengan longteks, sayang banget longteksnya udah aku apuss kalau ada aku masukin ke sini deh, maaf yah sayang.</p>
+      </dd>
+      
+      <dt><h4><span style="color:pink;">&bigstar; masa awal mula hubungan kita</span></h4></dt>
+      <dd>
+        <p><span style="color: black">awal sampai sekarang rasanya masih sama, aku masih sayang banget sama kamu, waktu awal aku obses banget sama kamuu, sebaliknya kamu, awalnya aku masih canggung kalau di real life kalau di chat gak sih hahahaha, pas di real life kamu ngajakin aku untuk yang pertama kalinya duduk di sebelah kamu waktu kita bimbel, aduh cangung aku sayang wkwkwk tapi mau gak mau yah mau, TERUSSSSS AKU SHOCKKK BANGETT TAUUUUU waktu kamu megang tangan akuu dalam hati aku <q>woyy help me pleasee</q> hahahhaha, lagian wktu itu aku the real islami gituh orangnya kan kata kamu bu haji hahahaha huhuwwww, tau gak pulang dari itu aku ngapain di rumah? pingsannnn hahah bercanda muka aku merah wkwkwkkw, teriak teriak gak jelasss, kamu sih hahah.</p>
+        <p><span style="color: black">kamu tuh perhatiannnn banget sama aku, tapi di sini aku belum sama sekali tau gimana caranya perhatian sama kamu, aku gak tau caranya biar kamu makin sayang ataupun suka ataupun cinta sama aku, aku gak tau itu semua gimana caranya, tapi sekarang udah dongg, perasaan aku yah.</p>
+        <p><span style="color: black">kita jadi sering pacaran di sekolah waktu istirahat terus kamu selalu beliin aku fruit tea walaupun salah beliin yang rasa apa kesukaan aku yang aku suka yang freze, tapi gak apa apa aku tetep minum kok, kamu tau gak botolnya masih ada tau sampai sekarang aku simpen di box hahahah.</p>
+        <p><span style="color: black">terus pulangnya kita ke neutron bareng, waktu itu hujan terus kamu buka hoodie kamu terus nutupin kepala aku karena aku gak bawa jaket, jadinya kamu yang basah deh huhuw maaf yahhh sayangg.</p>
+        <p><span style="color: black">tempat pertama kalinya kita main ke luar itu adalah binjas, hahaha inget gak pertama kali kita running date sama syafira sama revan, dan kita fotbar</p>  
+        <img src="IMG_20250531_055335.jpg" alt="runing date">
+      </dd>
+          <dt><h4><span style="color:pink;">&bigstar; cerita di jogja</span></h4></dt>
+          <dd>
+            <p><span style="color: black"> Tanggal 9 desember 2023 kita study tour perpisahan smp, yap wktu itu kita berangkat hujan sore sore sampai ke rest area 1 malem an turun buat sholat maghrib, dan aku ketemu kamu lagi jalan sama temen temen kamu, ke rest area 2 hehehe di situ aku udah badmood dan aku cuman makan dan nyari kamu tapi gak tau dimana dan ketemu terus itu hug pertama dari kamu heheheh gilaa</p>   
+            <p><span style="color: black"> sampai di rest area ke 3 aku kecewa banget sama kamu maaf, aku ngedenger kamu ngerokok malem pas sebelum meluk aku, aku marah dan kesel banget sama kamj karena kamu pernah janji ke aku kalau kamu gak bakal ngerokok. habis itu kita ke tebing kraton deh. di tebing kraton kita potbar juga dan jalan bareng.</p>     
+            <p><span style="color: black"> udah itu kita ke candi prambanan, di sini kita gak ketu karena katanya kamu pusing terus gak turun dari bus, sayang bangetckita gak potbar, yah waktu di candi aku khawatir ke kamu tapi aku cuman nanya nanya ke temen kamu wkwkwk terus have fun sama syafira masuk candi</p>
+            <p><span style="color: black"> dari prambanan kita ke hotel, aku beres beres sama mandi karena siap siap, kamu ngajak aku jalan malem di malioboro walaupun ya muka capek karena perjalanan, kita beli gelato bareng, sama menikmati malioboro malem malem, dan indahnya waktu itu hujan, jadi kerasa banget vibe nya hahahah</p>  
+            <p><span style="color: black"> karena udah malem juga jadi kita balik ke hotel buat istirahat, terus aku iseng main ke atas karena kamu di atas tapi anehnya cerita horonya aku nemu lantai 3 makasih, sama sama, terus second hug dari kamu deh wahahah mengoleksi hug please.</p>  
+            <p><span style="color: black"> malemnya aku tidur keringetan dan kena keram badan sama kaki dan mimpi buruk i don't know why jadi kebesokannya wah gila muka aku capek++</p>   
+            <p><span style="color: black"> paginya kita nyantai di malioboro, otw ke taman pintar deh disitu aku dah pusing dan panasnya kebangetan, sama kacamata aku ilang, badmood banget karena tanda h1 menstruasi</p>
+            <p><span style="color: black"> udah dari tampin kita ke museum apa ya lupa di sini kamu minta bareng okay deh, dan di sini kacamata aku ketemu di pake kelas b ternyata lmao, di sini aku serius pusing lemes dan mamam bareng kita dan kamu nsikin mood aku yang kepanasan ngasihin jamal kamu buat aku wkwk terus aku bawa ke dalam bus aku hahaha kamu sedih jamalnya aku bawa, tiba tiba aku menstruasi tiba tiba terus kamu kelihatan panik banget, padahal apa yang harus di panikin hahahahha.</p>
+            <p><span style="color: black"> dan dari situ kita otw ke pantai yeyy, di sini kita main air bareng, inget gak sendal aku lepas hahahhahahahah dan di paparaziin diandra</p>
+            <img src="IMG_20250531_055316.jpg" alt="pantai">
+            <p><span style="color: black"> udah dari pantai kita otw bandung deh</p>
+          </dd>
+              <dt><h4><span style="color:pink;">&bigstar; cerita wisuda</span></h4></dt>
+              <dd>
+                <p><span style="color: black"> sebelum wisuda kita ada event bikin year book dan itu malem malem 1 angkatan di smp kita, pulangnya juga kita pitbar</p>
+                <img src="IMG_20250601_000324.jpg" alt="year book">
+                <p><span style="color: black"> waktu kita wisuda kamu ganteng banget heheheheheh, kamu ngasih aku bunga favorite aku yap tulip sampai sekarang aku simpen.</p>
+                <img src="IMG_20250531_055352.jpg" alt="wisuda">
+          </dd>
+    </dl>
+                <br>
+                <br>
+                <p> <span style="color: red">29 may 2025, um... gak kerasa yah kenangan di atas 2023-2024 aja wkwkw, era nya udah habis, makasih banyak kenangannya seseru itu, dan maaf aku akhirin semuanya gitu aja dan nyakitin kamu</p>
+                  <h1><span style="color: black">End, thanks a bunch</span></h1>
+  </small>
+               
+    <script>
+    let pointerX = null;
+    let pointerY = null;
+    let isPointerDown = false;
+
+    // Create heart element at x, y
+    function createHeart(x, y) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = '❤';
+
+      // Random font size
+      const size = 20 + Math.random() * 20;
+      heart.style.fontSize = size + 'px';
+
+      // Random offset near pointer
+      const offsetX = (Math.random() - 0.5) * 30;
+      const offsetY = (Math.random() - 0.5) * 30;
+
+      heart.style.left = (x + offsetX) + 'px';
+      heart.style.top = (y + offsetY) + 'px';
+
+      document.body.appendChild(heart);
+
+      heart.addEventListener('animationend', () => {
+        heart.remove();
+      });
+    }
+
+    function spamHearts() {
+      // Spawn hearts following pointer when down
+      if (isPointerDown && pointerX !== null && pointerY !== null) {
+        for (let i = 0; i < 5; i++) {
+          createHeart(pointerX, pointerY);
+        }
+      }
+      requestAnimationFrame(spamHearts);
+    }
+
+    // Spawn spam hearts near bottom center on scroll continuously
+    let scrolling = false;
+    function scrollHearts() {
+      if (scrolling) {
+        // Bottom center viewport
+        const x = window.innerWidth / 2;
+        const y = window.innerHeight * 0.85;
+        for (let i = 0; i < 5; i++) {
+          createHeart(x, y);
+        }
+      }
+      requestAnimationFrame(scrollHearts);
+    }
+
+    // Start loops
+    spamHearts();
+    scrollHearts();
+
+    // Mouse events
+    window.addEventListener('mousedown', e => {
+      isPointerDown = true;
+      pointerX = e.clientX;
+      pointerY = e.clientY;
+    });
+
+    window.addEventListener('mousemove', e => {
+      pointerX = e.clientX;
+      pointerY = e.clientY;
+    });
+
+    window.addEventListener('mouseup', e => {
+      isPointerDown = false;
+    });
+
+    // Touch events
+    window.addEventListener('touchstart', e => {
+      isPointerDown = true;
+      if (e.touches.length > 0) {
+        pointerX = e.touches[0].clientX;
+        pointerY = e.touches[0].clientY;
+      }
+    }, {passive: true});
+
+    window.addEventListener('touchmove', e => {
+      if (e.touches.length > 0) {
+        pointerX = e.touches[0].clientX;
+        pointerY = e.touches[0].clientY;
+      }
+    }, {passive: true});
+
+    window.addEventListener('touchend', e => {
+      if (e.touches.length === 0) {
+        isPointerDown = false;
+        pointerX = null;
+        pointerY = null;
+      }
+    });
+
+    // Scroll detection to toggle hearts spam at bottom center
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      scrolling = true;
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        scrolling = false;
+      }, 150); // stop hearts spam 150ms after user stops scrolling
+    }, {passive:true});
+  </script>
+</body>
+</html>
+
